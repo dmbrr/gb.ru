@@ -1,0 +1,24 @@
+sec = 1
+min = 60
+hour = 3600
+day = 86400
+
+print('сколько duration?')
+duration = int(input())
+
+
+if duration < 60:
+  secs = duration // sec
+elif duration < 3600:
+  mins = duration // min
+  secs = duration - mins * min
+elif duration < 86400:
+  hours = duration // hour
+  mins = (duration - (hours * hour)) // min
+  secs = (duration - (hours * hour + mins * min)) // sec
+elif duration >= 86400:
+  days = duration // day
+  hours = (duration - days * day) // hour
+  mins = (duration - (days * day + hours * hour)) // min
+  secs = (duration - (days * day + hours * hour + mins * min)) // sec
+print('дней', days, 'часов', hours, 'минут', mins, 'секунд', secs)

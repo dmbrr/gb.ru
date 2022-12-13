@@ -1,0 +1,14 @@
+tip1 = 'процент'
+tip2 = 'процента'
+tip3 = 'процентов'
+
+print('сколько процентов?')
+percent = int(input())
+
+if percent == 1 or percent == 21 or percent == 31 or percent == 41 or percent == 51 or percent == 61 or percent == 71 or percent == 81 or percent == 91:
+  per = tip1
+elif (percent > 1 and percent < 5) or (percent > 21 and percent < 25) or (percent > 31 and percent < 35) or (percent > 41 and percent < 45) or (percent > 51 and percent < 55) or (percent > 61 and percent < 65) or (percent > 71 and percent < 75) or (percent > 81 and percent < 85) or (percent > 91 and percent < 95):
+  per = tip2
+else: per = tip3
+
+print(per)
